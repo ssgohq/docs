@@ -20,7 +20,7 @@ Creates `.ss.yaml` in current directory.
 
 ## ss plugin
 
-Manage plugins.
+Manage plugins. See [Plugin Management](/plugin-management) for detailed guide.
 
 ```bash
 ss plugin list                           # List installed
