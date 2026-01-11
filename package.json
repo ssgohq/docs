@@ -1,0 +1,13 @@
+{
+  "name": "ss-cli-docs",
+  "version": "1.0.0",
+  "description": "Documentation for ss-cli",
+  "scripts": {
+    "docs:dev": "vitepress dev content",
+    "docs:build": "vitepress build content",
+    "docs:preview": "vitepress preview content"
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.4"
+  }
+}
