@@ -15,46 +15,7 @@ ss-cli will:
 
 ### Private Repositories
 
-ss-cli supports installing plugins from private GitHub repositories.
-
-**Authentication priority:**
-
-1. Global config (`~/.ss/config.yaml`)
-2. GitHub CLI (`gh auth token`)
-3. Environment variable (`GITHUB_TOKEN`)
-
-#### Option 1: Global Config (recommended)
-
-```yaml
-# ~/.ss/config.yaml
-github_token: ghp_xxxxxxxxxxxxxxxxxxxx
-```
-
-#### Option 2: GitHub CLI
-
-If you have [GitHub CLI](https://cli.github.com/) installed and authenticated:
-
-```bash
-gh auth login
-```
-
-ss-cli will automatically use your `gh` token.
-
-#### Option 3: Environment Variable
-
-```bash
-export GITHUB_TOKEN=ghp_xxxxxxxxxxxxxxxxxxxx
-ss plugin install myorg/private-plugin
-```
-
-### Token Permissions
-
-For private repositories, your token needs:
-- `repo` scope (full control of private repositories)
-
-For public repositories with releases:
-- No authentication required
-- Token helps avoid GitHub API rate limits
+ss-cli supports private GitHub repositories. See [GitHub Authentication](/github-auth) for setup.
 
 ## Install from Local Path
 

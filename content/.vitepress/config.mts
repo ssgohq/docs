@@ -17,7 +17,8 @@ export default defineConfig({
         items: [
           { text: 'Getting Started', link: '/guide' },
           { text: 'Commands', link: '/commands' },
-          { text: 'Plugin Management', link: '/plugin-management' }
+          { text: 'Plugin Management', link: '/plugin-management' },
+          { text: 'GitHub Authentication', link: '/github-auth' }
         ]
       },
       {
