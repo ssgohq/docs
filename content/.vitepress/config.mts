@@ -21,9 +21,16 @@ export default defineConfig({
         ]
       },
       {
-        text: 'Plugins',
+        text: 'Official Plugins',
         items: [
-          { text: 'Official Plugins', link: '/plugins' },
+          { text: 'Overview', link: '/plugins/' },
+          { text: 'degit', link: '/plugins/degit' },
+          { text: 'run', link: '/plugins/run' }
+        ]
+      },
+      {
+        text: 'Plugin SDK',
+        items: [
           { text: 'Building Plugins', link: '/sdk' },
           { text: 'API Reference', link: '/api' }
         ]

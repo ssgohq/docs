@@ -1,6 +1,4 @@
-# Official Plugins
-
-## run
+# run
 
 Service runner with hot reload and TUI.
 
@@ -8,7 +6,7 @@ Service runner with hot reload and TUI.
 ss plugin install ssgohq/ss-plugin-run
 ```
 
-### Features
+## Features
 
 - Run multiple services concurrently
 - File watching with hot reload
@@ -16,7 +14,7 @@ ss plugin install ssgohq/ss-plugin-run
 - Build step support
 - Service dependencies
 
-### Usage
+## Usage
 
 ```bash
 ss run                    # Run all services
@@ -24,17 +22,19 @@ ss run api worker         # Run specific services
 ss run init               # Generate config from project
 ```
 
-### Flags
+## Flags
 
-| Flag | Description |
-|------|-------------|
-| `--config`, `-c` | Config file path |
-| `--no-watch` | Disable file watching |
-| `--no-build` | Skip build step |
-| `--no-tui` | Plain output mode |
-| `--verbose`, `-v` | Verbose output |
+| Flag | Short | Description |
+|------|-------|-------------|
+| `--config` | `-c` | Config file path |
+| `--no-watch` | | Disable file watching |
+| `--no-build` | | Skip build step |
+| `--no-tui` | | Plain output mode |
+| `--verbose` | `-v` | Verbose output |
 
-### Config Example
+## Config
+
+Define services in `.ss.yaml`:
 
 ```yaml
 services:
@@ -53,7 +53,7 @@ services:
       - api
 ```
 
-### Service Config
+## Service Options
 
 | Field | Description |
 |-------|-------------|
@@ -63,4 +63,14 @@ services:
 | `watch.patterns` | File patterns to watch |
 | `depends_on` | Services to start first |
 
-Source: [github.com/ssgohq/ss-plugin-run](https://github.com/ssgohq/ss-plugin-run)
+## Initialize Config
+
+Scan project and generate config:
+
+```bash
+ss run init
+```
+
+## Source
+
+[github.com/ssgohq/ss-plugin-run](https://github.com/ssgohq/ss-plugin-run)
