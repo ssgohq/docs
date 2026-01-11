@@ -3,6 +3,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "ss-cli",
   description: "Plugin-based CLI for development workflows",
+  base: '/docs/',
   themeConfig: {
     nav: [
       { text: 'Guide', link: '/guide' },
