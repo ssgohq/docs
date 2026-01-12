@@ -8,6 +8,8 @@ content/.vitepress/dist/
 # Logs
 *.log
 
+plans/
+
 # OS
 .DS_Store
 

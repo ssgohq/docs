@@ -1,9 +1,14 @@
 import { defineConfig } from 'vitepress'
+import apiLang from './api-lang.json'
 
 export default defineConfig({
   title: "ss-cli",
   description: "Plugin-based CLI for development workflows",
   base: '/docs/',
+
+  markdown: {
+    languages: [apiLang as any]
+  },
   
   themeConfig: {
     nav: [
@@ -24,6 +29,18 @@ export default defineConfig({
           ]
         }
       ],
+      '/plugins/api/': [
+        {
+          text: 'API Plugin',
+          items: [
+            { text: 'Overview', link: '/plugins/api/' },
+            { text: 'API Syntax', link: '/plugins/api/syntax' },
+            { text: 'Type Definitions', link: '/plugins/api/types' },
+            { text: 'Service Definitions', link: '/plugins/api/services' },
+            { text: 'CLI Reference', link: '/plugins/api/cli' }
+          ]
+        }
+      ],
       '/plugins/': [
         {
           text: 'Plugins',
@@ -35,6 +52,7 @@ export default defineConfig({
           text: 'Official Plugins',
           items: [
             { text: 'Overview', link: '/plugins/' },
+            { text: 'api', link: '/plugins/api/' },
             { text: 'degit', link: '/plugins/degit' },
             { text: 'run', link: '/plugins/run' }
           ]

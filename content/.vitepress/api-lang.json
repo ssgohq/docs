@@ -1,0 +1,157 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "api",
+  "scopeName": "source.api",
+  "fileTypes": ["api"],
+  "patterns": [
+    { "include": "#comments" },
+    { "include": "#annotations" },
+    { "include": "#keywords" },
+    { "include": "#http-methods" },
+    { "include": "#types" },
+    { "include": "#struct-tags" },
+    { "include": "#strings" },
+    { "include": "#numbers" },
+    { "include": "#punctuation" }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.double-slash.api",
+          "match": "//.*$"
+        },
+        {
+          "name": "comment.block.api",
+          "begin": "/\\*",
+          "end": "\\*/",
+          "captures": {
+            "0": { "name": "punctuation.definition.comment.api" }
+          }
+        }
+      ]
+    },
+    "annotations": {
+      "patterns": [
+        {
+          "name": "entity.name.tag.annotation.api",
+          "match": "@(server|handler|doc)\\b"
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.api",
+          "match": "\\b(syntax|info|type|service|returns|import)\\b"
+        },
+        {
+          "name": "keyword.other.option.api",
+          "match": "\\b(prefix|group|middleware|jwt|timeout|maxBytes)\\b"
+        },
+        {
+          "name": "keyword.other.info.api",
+          "match": "\\b(title|desc|description|author|email|version|summary)\\b"
+        }
+      ]
+    },
+    "http-methods": {
+      "patterns": [
+        {
+          "name": "keyword.other.http-method.api",
+          "match": "\\b(get|post|put|delete|patch|head|options|connect|trace|any)\\b"
+        }
+      ]
+    },
+    "types": {
+      "patterns": [
+        {
+          "name": "support.type.primitive.api",
+          "match": "\\b(bool|byte|int|int8|int16|int32|int64|uint|uint8|uint16|uint32|uint64|float32|float64|string|interface)\\b"
+        },
+        {
+          "name": "support.type.composite.api",
+          "match": "\\b(map)\\b"
+        },
+        {
+          "name": "keyword.operator.pointer.api",
+          "match": "\\*"
+        },
+        {
+          "name": "punctuation.definition.slice.api",
+          "match": "\\[\\]"
+        }
+      ]
+    },
+    "struct-tags": {
+      "patterns": [
+        {
+          "name": "string.quoted.backtick.api",
+          "begin": "`",
+          "end": "`",
+          "patterns": [
+            {
+              "name": "entity.name.tag.struct-tag.api",
+              "match": "\\b(json|path|query|header|form|validate)\\b"
+            },
+            {
+              "name": "keyword.other.tag-option.api",
+              "match": "\\b(required|optional|omitempty|default|min|max|range|options|email|url)\\b"
+            }
+          ]
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.api",
+          "begin": "\"",
+          "end": "\"",
+          "patterns": [
+            {
+              "name": "constant.character.escape.api",
+              "match": "\\\\."
+            }
+          ]
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "name": "constant.numeric.float.api",
+          "match": "\\b\\d+\\.\\d+\\b"
+        },
+        {
+          "name": "constant.numeric.integer.api",
+          "match": "\\b\\d+\\b"
+        }
+      ]
+    },
+    "punctuation": {
+      "patterns": [
+        {
+          "name": "punctuation.definition.block.api",
+          "match": "[{}]"
+        },
+        {
+          "name": "punctuation.definition.group.api",
+          "match": "[()]"
+        },
+        {
+          "name": "punctuation.separator.api",
+          "match": "[:,;]"
+        },
+        {
+          "name": "keyword.operator.assignment.api",
+          "match": "="
+        },
+        {
+          "name": "punctuation.definition.path.api",
+          "match": "/[a-zA-Z0-9_:/-]*"
+        }
+      ]
+    }
+  }
+}
