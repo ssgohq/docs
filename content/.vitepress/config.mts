@@ -20,7 +20,6 @@ export default defineConfig({
           items: [
             { text: 'Introduction', link: '/guide/' },
             { text: 'Commands', link: '/guide/commands' },
-            { text: 'Plugin Management', link: '/guide/plugins' },
             { text: 'GitHub Authentication', link: '/guide/github-auth' }
           ]
         }
