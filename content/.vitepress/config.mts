@@ -41,6 +41,17 @@ export default defineConfig({
           ]
         }
       ],
+      '/plugins/rpc/': [
+        {
+          text: 'RPC Plugin',
+          items: [
+            { text: 'Overview', link: '/plugins/rpc/' },
+            { text: 'Proto Format', link: '/plugins/rpc/proto' },
+            { text: 'Configuration', link: '/plugins/rpc/config' },
+            { text: 'CLI Reference', link: '/plugins/rpc/cli' }
+          ]
+        }
+      ],
       '/plugins/': [
         {
           text: 'Plugins',
@@ -53,6 +64,7 @@ export default defineConfig({
           items: [
             { text: 'Overview', link: '/plugins/' },
             { text: 'api', link: '/plugins/api/' },
+            { text: 'rpc', link: '/plugins/rpc/' },
             { text: 'degit', link: '/plugins/degit' },
             { text: 'run', link: '/plugins/run' }
           ]

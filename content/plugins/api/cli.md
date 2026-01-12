@@ -113,7 +113,7 @@ ss api gen --api my-service.api
 go mod tidy
 
 # 6. Run server
-go run cmd/main.go -c etc/api.yaml
+go run cmd/main.go -c etc/config.yaml
 ```
 
 ### Adding New Routes
@@ -130,28 +130,12 @@ ss api logic --api my-service.api
 
 ### Configuration
 
-The generated server uses `etc/api.yaml` for configuration:
+The generated server uses `etc/config.yaml` for configuration:
 
 ```yaml
 name: my-api
 host: 0.0.0.0
 port: 8080
-
-log:
-  level: info
-  format: json
-
-metric:
-  enabled: true
-  port: 6060
-  path: /metrics
-  healthPath: /healthz
-  readyPath: /readyz
-
-# Optional: JWT authentication
-# auth:
-#   jwtSecret: your-secret-key
-#   jwtExpire: 86400
 
 # Optional: OpenTelemetry tracing
 # trace:
@@ -172,5 +156,5 @@ metric:
 | `internal/middleware/middleware.go` | Middleware | Yes |
 | `internal/svc/service_context.go` | Service context | Yes |
 | `internal/types/types.go` | Request/response types | Yes |
-| `etc/api.yaml` | Configuration | Yes |
+| `etc/config.yaml` | Configuration | No (preserved) |
 | `go.mod` | Go module | Yes |

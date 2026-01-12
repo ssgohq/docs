@@ -80,7 +80,7 @@ ss api gen --api todo.api --dir ./todo-api --module github.com/myorg/todo-api
 ```bash
 cd todo-api
 go mod tidy
-go run cmd/main.go -c etc/api.yaml
+go run cmd/main.go -c etc/config.yaml
 ```
 
 ## Generated Structure
@@ -107,7 +107,7 @@ todo-api/
 │   └── types/
 │       └── types.go
 ├── etc/
-│   └── api.yaml
+│   └── config.yaml
 └── go.mod
 ```
 
