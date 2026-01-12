@@ -8,10 +8,10 @@ hero:
   actions:
     - theme: brand
       text: Get Started
-      link: /guide
+      link: /guide/
     - theme: alt
       text: Build Plugin
-      link: /sdk
+      link: /sdk/
 
 features:
   - title: Plugin Architecture

@@ -3,7 +3,7 @@
 ## Install SDK
 
 ```bash
-go get github.com/ssgohq/ss-plugin-sdk
+go get github.com/ssgohq/ss-plugin-sdk@latest
 ```
 
 ## Plugin Interface
@@ -105,4 +105,9 @@ func (p *MyPlugin) Validate(ctx *sdk.Context) error {
 }
 ```
 
-Source: [github.com/ssgohq/ss-plugin-hello](https://github.com/ssgohq/ss-plugin-hello)
+## Next Steps
+
+- [API Reference](./api) - Full SDK API documentation
+- [naming](./naming) - Naming convention utilities
+- [gen](./gen) - Code generation framework
+- [gomod](./gomod) - Go module utilities

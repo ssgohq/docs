@@ -15,7 +15,7 @@ ss-cli will:
 
 ### Private Repositories
 
-ss-cli supports private GitHub repositories. See [GitHub Authentication](/github-auth) for setup.
+ss-cli supports private GitHub repositories. See [GitHub Authentication](/guide/github-auth) for setup.
 
 ## Install from Local Path
 
@@ -69,11 +69,3 @@ Shows detailed plugin information including commands, flags, and source.
 | GitHub (full) | `github.com/user/repo` | Also works |
 | Local | `./path` or `/abs/path` | Must have `plugin.yaml` |
 | PATH | `ss-*` binaries | Auto-discovered |
-
-## Plugin Directories
-
-| Path | Scope |
-|------|-------|
-| `~/.ss/plugins/` | Global plugins |
-| `./plugins/` | Project plugins |
-| `PATH` | System binaries matching `ss-*` |

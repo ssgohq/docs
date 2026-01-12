@@ -44,7 +44,7 @@ ss degit
 
 ## Private Repositories
 
-Uses same authentication as ss-cli. See [GitHub Authentication](/github-auth).
+Uses same authentication as ss-cli. See [GitHub Authentication](../guide/github-auth).
 
 If tarball download fails, automatically falls back to git clone using system credentials.
 
