@@ -2,88 +2,71 @@ import { defineConfig } from 'vitepress'
 import apiLang from './api-lang.json'
 
 export default defineConfig({
-  title: "ss-cli",
-  description: "Plugin-based CLI for development workflows",
+  title: "ssgo",
+  description: "Go microservice code generation toolkit",
   base: '/docs/',
 
   markdown: {
     languages: [apiLang as any]
   },
-  
+
   themeConfig: {
     nav: [
-      { text: 'Guide', link: '/guide/' },
-      { text: 'Plugins', link: '/plugins/' },
-      { text: 'SDK', link: '/sdk/' },
-      { text: 'GitHub', link: 'https://github.com/ssgohq/ss-cli' }
+      { text: 'Getting Started', link: '/getting-started/' },
+      { text: 'Commands', link: '/commands/' },
+      { text: 'API Spec', link: '/api-spec/' },
+      { text: 'RPC Spec', link: '/rpc-spec/' },
+      { text: 'GitHub', link: 'https://github.com/ssgohq/ssgo' }
     ],
 
     sidebar: {
-      '/guide/': [
+      '/getting-started/': [
         {
-          text: 'Guide',
+          text: 'Getting Started',
           items: [
-            { text: 'Introduction', link: '/guide/' },
-            { text: 'Commands', link: '/guide/commands' },
-            { text: 'GitHub Authentication', link: '/guide/github-auth' }
+            { text: 'Introduction', link: '/getting-started/' },
+            { text: 'Configuration', link: '/getting-started/configuration' }
           ]
         }
       ],
-      '/plugins/api/': [
+      '/commands/': [
         {
-          text: 'API Plugin',
+          text: 'Commands',
           items: [
-            { text: 'Overview', link: '/plugins/api/' },
-            { text: 'API Syntax', link: '/plugins/api/syntax' },
-            { text: 'Type Definitions', link: '/plugins/api/types' },
-            { text: 'Service Definitions', link: '/plugins/api/services' },
-            { text: 'CLI Reference', link: '/plugins/api/cli' }
+            { text: 'Overview', link: '/commands/' },
+            { text: 'API Commands', link: '/commands/api' },
+            { text: 'RPC Commands', link: '/commands/rpc' },
+            { text: 'Database Commands', link: '/commands/db' },
+            { text: 'Run Command', link: '/commands/run' }
           ]
         }
       ],
-      '/plugins/rpc/': [
+      '/api-spec/': [
         {
-          text: 'RPC Plugin',
+          text: 'API Specification',
           items: [
-            { text: 'Overview', link: '/plugins/rpc/' },
-            { text: 'Proto Format', link: '/plugins/rpc/proto' },
-            { text: 'Configuration', link: '/plugins/rpc/config' },
-            { text: 'CLI Reference', link: '/plugins/rpc/cli' }
+            { text: 'Overview', link: '/api-spec/' },
+            { text: 'Syntax', link: '/api-spec/syntax' },
+            { text: 'Type Definitions', link: '/api-spec/types' },
+            { text: 'Service Definitions', link: '/api-spec/services' }
           ]
         }
       ],
-      '/plugins/': [
+      '/rpc-spec/': [
         {
-          text: 'Plugins',
+          text: 'RPC Specification',
           items: [
-            { text: 'Management', link: '/plugins/management' }
-          ]
-        },
-        {
-          text: 'Official Plugins',
-          items: [
-            { text: 'Overview', link: '/plugins/' },
-            { text: 'api', link: '/plugins/api/' },
-            { text: 'rpc', link: '/plugins/rpc/' },
-            { text: 'degit', link: '/plugins/degit' },
-            { text: 'run', link: '/plugins/run' }
+            { text: 'Overview', link: '/rpc-spec/' },
+            { text: 'Proto Format', link: '/rpc-spec/proto' },
+            { text: 'Configuration', link: '/rpc-spec/config' }
           ]
         }
       ],
-      '/sdk/': [
+      '/reference/': [
         {
-          text: 'Plugin SDK',
+          text: 'Reference',
           items: [
-            { text: 'Getting Started', link: '/sdk/' },
-            { text: 'API Reference', link: '/sdk/api' }
-          ]
-        },
-        {
-          text: 'Packages',
-          items: [
-            { text: 'naming', link: '/sdk/naming' },
-            { text: 'gen', link: '/sdk/gen' },
-            { text: 'gomod', link: '/sdk/gomod' }
+            { text: 'GitHub Authentication', link: '/reference/github-auth' }
           ]
         }
       ]
@@ -94,7 +77,7 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/ssgohq/ss-cli' }
+      { icon: 'github', link: 'https://github.com/ssgohq/ssgo' }
     ],
 
     footer: {
