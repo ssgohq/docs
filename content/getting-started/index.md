@@ -82,9 +82,23 @@ my-project/
 └── common-pb/            # Shared protobuf types
 ```
 
+## Runtime Library
+
+Generated services use [goten-core](https://github.com/ssgohq/goten-core) as the runtime library, providing:
+
+- **Logging** - Structured logging with Zap
+- **Metrics** - Prometheus metrics collection
+- **Tracing** - OpenTelemetry distributed tracing
+- **Middleware** - HTTP middleware (CORS, JWT, logging)
+- **Stores** - Database connection utilities (PostgreSQL, MySQL, Redis)
+- **Lifecycle** - Graceful startup/shutdown management
+
+The runtime library is automatically included in generated `go.mod` files.
+
 ## What's Next
 
 - [Configuration](/getting-started/configuration) - Learn about `.ss.yaml` configuration
 - [API Commands](/commands/api) - Generate HTTP services
 - [RPC Commands](/commands/rpc) - Generate RPC services
 - [Database Commands](/commands/db) - Generate database code
+- [goten-core Reference](/reference/goten-core) - Runtime library documentation

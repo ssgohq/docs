@@ -70,4 +70,8 @@ ss run
     <strong>📝 API Spec</strong><br/>
     <span style="color: var(--vp-c-text-2)">Learn the .api file format</span>
   </a>
+  <a href="/reference/goten-core" style="flex: 1; min-width: 200px; padding: 1rem; border: 1px solid var(--vp-c-divider); border-radius: 8px; text-decoration: none;">
+    <strong>📦 goten-core</strong><br/>
+    <span style="color: var(--vp-c-text-2)">Runtime library documentation</span>
+  </a>
 </div>

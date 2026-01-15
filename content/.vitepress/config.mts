@@ -66,6 +66,7 @@ export default defineConfig({
         {
           text: 'Reference',
           items: [
+            { text: 'goten-core', link: '/reference/goten-core' },
             { text: 'GitHub Authentication', link: '/reference/github-auth' }
           ]
         }
