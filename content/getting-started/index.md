@@ -21,7 +21,7 @@ ssgo is an all-in-one CLI toolkit for building Go microservices with [Hertz](htt
 brew install ssgohq/tap/ssgo
 
 # Using go install
-go install github.com/ssgohq/ssgo/tool/cmd/ssgo@latest
+go install github.com/ssgohq/ssgo/tool/cmd/ss@latest
 ```
 
 ## Quick Start
