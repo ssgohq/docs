@@ -103,6 +103,42 @@ run:
           - "**/*.yaml"
 ```
 
+## RPC Generation Configuration
+
+The `rpc:` section enables zero-flag generation for Kitex RPC services.
+
+```yaml
+rpc:
+  proto_module:
+    dir: shared-proto          # directory containing go.mod + proto/
+    gen_path: kitex_gen        # generated code path (default: kitex_gen)
+
+  services:
+    - dir: auth-svc            # output directory for the service
+      protos:
+        - proto/auth/v1/auth.proto   # relative to proto_module.dir
+      options:
+        with_trace: true       # enable OpenTelemetry tracing
+        with_redis: false      # enable Redis integration
+
+    - dir: user-svc
+      protos:
+        - proto/user/v1/user.proto
+      options:
+        with_trace: true
+```
+
+With this configuration:
+
+```bash
+ss rpc model        # generate shared proto models
+ss rpc gen          # generate all services
+ss rpc gen auth-svc # generate only auth-svc
+ss rpc sync         # model + gen in one command
+```
+
+CLI flags always override `.ss.yaml` values. See [RPC Commands](../commands/rpc) for full details.
+
 ## Environment Variables
 
 ssgo also reads configuration from environment variables:
