@@ -101,7 +101,48 @@ run:
         include:
           - "**/*.go"
           - "**/*.yaml"
+
+api:
+  apis:
+    - file: api/user.api
+      dir: ./api-gateway
+      options:
+        port: 8080
+        with_logic: true
+        format: json
 ```
+
+## API Generation Configuration
+
+The `api:` section enables zero-flag generation for Hertz HTTP API services.
+
+```yaml
+api:
+  apis:
+    - file: api/user.api         # path to .api file
+      dir: .                     # output directory (default: ".")
+      options:
+        port: 8080               # server port (default: 8080)
+        with_logic: true         # generate logic files (default: true)
+        format: json             # doc format: json|yaml (default: json)
+
+    - file: api/order.api
+      dir: order-api
+      options:
+        port: 9090
+        format: yaml
+```
+
+With this configuration:
+
+```bash
+ss api gen           # generate all API services
+ss api gen user.api  # generate only user API
+ss api doc           # generate all OpenAPI docs
+ss api logic         # regenerate all logic files
+```
+
+CLI flags always override `.ss.yaml` values. See [API Commands](../commands/api) for full details.
 
 ## RPC Generation Configuration
 
